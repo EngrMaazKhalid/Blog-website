@@ -1,0 +1,63 @@
+.setting{
+    display: flex;
+}
+
+.settingwrapper{
+    flex:9;
+    padding:3rem;
+}
+.settingTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.settingUpdateTitle{
+    font-size: 3rem;
+    color: brown;
+    margin-bottom: 2rem;
+}
+
+.settingDeleteTitle{
+    color: red;
+    cursor: pointer;
+}
+.settingForm{
+    display: flex;
+    flex-direction: column;
+}
+.settingPP{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.settingPP > img{
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+
+}
+.settingForm > label{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.settingForm > input{
+    color: gray;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    height: 3rem;
+}
+.settingButton{
+    border: none;
+    align-self: center;
+    width: 10.5rem;
+    color: white;
+    background-color: teal;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+}

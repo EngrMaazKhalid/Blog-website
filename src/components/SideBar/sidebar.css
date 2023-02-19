@@ -1,0 +1,56 @@
+.sideBar{
+    flex: 3;
+    background-color: rgb(242, 243, 245);
+    margin: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.sidebar-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: 80% ;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 20px;
+    
+    font-weight: 600;
+    margin: 1rem;
+    padding: .5rem;
+    border-top: 1px solid rgb(187, 187, 187);
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+.sidebar-para{
+    padding: 30px;
+    margin: 0;
+}
+.sidebar-img{
+    background-image: url(aboutus.jpg);
+    width: 90%;
+    z-index: 1000;
+    height: 10rem;
+    background-size: cover;
+    background-position: center;
+  
+}
+.sidebarul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebarli{
+    display: inline-block;
+    width: 50%;
+    margin-top: 1.3rem;
+    cursor: pointer;
+}
