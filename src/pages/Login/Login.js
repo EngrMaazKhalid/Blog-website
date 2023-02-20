@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Login.css'
 export default function Login() {
   return (
@@ -13,7 +14,7 @@ export default function Login() {
             <input type='password' className='LoginInput' placeholder='Enter your password here....' />
             <button className='buttonlogin'>Login</button>
         </form>
-            <button className='buttonRegister'>Register</button>
+            <button className='buttonRegister'><Link to='/register' style={{ textDecoration: 'none', color: 'inherit' }}>Register</Link></button>
     </div>
   )
 }

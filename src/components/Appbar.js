@@ -1,20 +1,9 @@
 import * as React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
 
-// import MenuIcon from '@mui/icons-material/Menu';
-// import Container from '@mui/material/Container';
-// import Avatar from '@mui/material/Avatar';
-// import Button from '@mui/material/Button';
-// import Tooltip from '@mui/material/Tooltip';
+import { MenuItem, Menu, AppBar, Container, Toolbar, Typography, Box, IconButton, Button, Tooltip, Avatar } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-// import AdbIcon from '@mui/icons-material/Adb';
-import { MenuItem, Menu, AppBar, Container, Toolbar,  Typography, Box, IconButton, Button, Tooltip, Avatar } from '@mui/material';
-
-const pages = ['Home', 'About', 'Contact', ];
+const pages = ['Home', 'About', 'Contact',];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -35,9 +24,9 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  const user = true;
   return (
-    <AppBar position="static" sx={{background:'red'}}>
+    <AppBar position="static" sx={{ background: 'red' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -89,16 +78,16 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              
-                <MenuItem>
-                  <Typography textAlign="center">Home</Typography>
-                  <Typography textAlign="center">About</Typography>
-                  <Typography textAlign="center">Write</Typography>
-                  <Typography textAlign="center">Contact</Typography>
-                  <Typography textAlign="center">Logout</Typography>
-                 
-                </MenuItem>
-              
+
+              <MenuItem>
+                <Typography textAlign="center">Home</Typography>
+                <Typography textAlign="center">About</Typography>
+                <Typography textAlign="center">Write</Typography>
+                <Typography textAlign="center">Contact</Typography>
+                <Typography textAlign="center">Logout</Typography>
+
+              </MenuItem>
+
               {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
@@ -128,28 +117,34 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          
-              <Button
-                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1.4rem' }}>
-               Home
-              </Button>
-              <Button
-                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1.4rem' }}>
-               About
-              </Button>
-              <Button
-                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1.4rem' }}>
-               Write
-              </Button>
-              <Button
-                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1.4rem' }}>
-               Contact
-              </Button>
-              <Button
-                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1.4rem' }}>
-               Logout
-              </Button>
-    
+
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+              <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link>
+
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+
+              <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>About</Link>
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+
+              <Link to='/write' style={{ textDecoration: 'none', color: 'inherit' }}>Write</Link>
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+
+              <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>Contact</Link>
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+
+              {/* <Link to='/' style={{textDecoration:'none', color:'inherit'}}>Logout</Link> */}
+              {user && "Logout"}
+            </Button>
+
             {/* {pages.map((page) => (
               <Button
                 key={page}
@@ -161,13 +156,14 @@ function ResponsiveAppBar() {
             ))} */}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+
+
+          {user ? (<Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="Remy Sharp" src={require("./images.jpg")} /> 
               </IconButton>
-            </Tooltip>
-            <Menu
+            </Tooltip>    <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -189,7 +185,20 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box>) :
+            <>
+              <Button
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+                <Link to='/login' style={{ textDecoration: 'none', color: 'inherit' }}>Login</Link>
+              </Button>
+              <Button
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: '1.4rem' }}>
+                <Link to='/register' style={{ textDecoration: 'none', color: 'inherit' }}>Register</Link>
+              </Button>
+            </>
+          }
+
+
         </Toolbar>
       </Container>
     </AppBar>

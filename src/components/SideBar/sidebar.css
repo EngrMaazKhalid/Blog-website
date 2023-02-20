@@ -1,8 +1,8 @@
 .sideBar{
     flex: 3;
     background-color: rgb(242, 243, 245);
-    margin: 2rem;
-    padding-bottom: 3rem;
+    margin: 2.5rem;
+    padding-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -21,36 +21,38 @@
     justify-content: center;
    width: 80% ;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     line-height: 20px;
     
     font-weight: 600;
-    margin: 1rem;
-    padding: .5rem;
+    margin: 1.5rem;
+    padding: 1rem;
     border-top: 1px solid rgb(187, 187, 187);
     border-bottom: 1px solid rgb(187, 187, 187);
 }
 .sidebar-para{
     padding: 30px;
+    font-size: 1.6rem;
     margin: 0;
 }
 .sidebar-img{
     background-image: url(aboutus.jpg);
     width: 90%;
     z-index: 1000;
-    height: 10rem;
+    height: 20rem;
     background-size: cover;
     background-position: center;
   
 }
 .sidebarul{
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 .sidebarli{
     display: inline-block;
     width: 50%;
     margin-top: 1.3rem;
+    font-size: 1.6rem;
     cursor: pointer;
 }

@@ -3,7 +3,7 @@
     margin:30px;
 }
 .SinglePostImg{
- height: 25rem;
+ height: 30rem;
  width: 100%;
  border-radius: 5px;
  object-fit: cover;
@@ -23,10 +23,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 2.8rem;
     
 }
 .SinglePosticon{
-    margin-left: 10px;
+    margin-left: 1rem;
     cursor: pointer;
 }
 .SinglePosticon:first-child{
@@ -39,17 +40,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 2.5rem;
     color: rgb(102, 102, 102);
 }
 .SinglePostDesc{
     color: #666;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     padding: 10px;
-    list-style: 2rem;
+    list-style: 3rem;
 }
 .SinglePostDesc::first-letter{
-    font-size: 2.5rem;
-    margin-left: 2rem;
+    font-size: 3rem;
+    margin-left: 3rem;
     font-weight: 600;
+}
+.SinglePostAuthor{
+    font-size: 1.4rem;
+}
+.SinglePostDate{
+    font-size: 1.4rem;
 }
